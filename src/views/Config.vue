@@ -17,15 +17,6 @@
             </Col>
             <Col span="6">&nbsp;</Col>
         </Row>
-        <div class="notice">
-            <p>{{$t('config.button.notice1')}}</p>
-            <p>{{$t('config.button.notice2')}}</p>
-
-        </div>
-        <a href="https://github.com/pocketdigi/kong-admin-ui"><img
-                style="position: absolute; top: 0; left: 0; border: 0;"
-                src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
-        <a @click="changeLanguage"  style="position: absolute; top: 20px; right: 20px; border: 0;">{{language}}</a>
     </div>
 
 </template>
