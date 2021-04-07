@@ -59,7 +59,7 @@ export default {
         serviceInfo:'Service Info',
         routeInfo:'Route Info',
         service_upstream:'Service\'s Upstream',
-        upstreamNotExisted:'Upstream `{host}` is not existed,if it\'s not a external host,You must add a Upstream named `{host}`',
+        upstreamNotExisted:'Upstream `{host}` does not exist. If this is not an external host, You must add an Upstream named `{host}`',
         fieldServiceName:'The Service name',
         fieldRetries:'The number of retries to execute upon failure to proxy.',
         fieldProtocol:'The protocol used to communicate with the upstream. It can be one of http or https.',
@@ -73,7 +73,7 @@ export default {
     },
     target:{
         addTarget:'Add Target',
-        targetHint:'enter target,default port is 8000',
+        targetHint:'enter target, default port is 8000',
         targetNotice:'Please fill target',
         weightNotice:'Please fill weight',
         deleteTarget:'Delete Target'
