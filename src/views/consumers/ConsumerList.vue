@@ -4,7 +4,7 @@
             <BreadcrumbItem to="/">Home</BreadcrumbItem>
             <BreadcrumbItem to="/consumers">Consumers</BreadcrumbItem>
         </Breadcrumb>
-        <Row>
+        <Row class-name="tooling">
             <Col span="12"> <h1>Consumer List:</h1></Col>
             <Col span="12" style="text-align:right;position: absolute;top: 30%;right: 0px">
                 <Button type="primary" size="small" @click="addConsumer">Add Consumer</Button>
@@ -88,11 +88,5 @@
 <style scoped>
     #table {
         margin-top: 10px;
-    }
-
-    .page {
-        text-align: right;
-        margin-top: 10px;
-        font-size: 1rem;
     }
 </style>

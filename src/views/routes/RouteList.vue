@@ -4,7 +4,7 @@
             <BreadcrumbItem to="/">Home</BreadcrumbItem>
             <BreadcrumbItem to="/routes">Route</BreadcrumbItem>
         </Breadcrumb>
-        <Row>
+        <Row class-name="tooling">
             <Col span="12"> <h1>Route List:</h1></Col>
             <Col span="12" style="text-align:right;position: absolute;top: 30%;right: 0px">
                 <Button type="primary" size="small" @click="addRoute">Add Route</Button>

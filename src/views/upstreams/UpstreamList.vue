@@ -4,7 +4,7 @@
             <BreadcrumbItem to="/">Home</BreadcrumbItem>
             <BreadcrumbItem to="/upstream">Upstream</BreadcrumbItem>
         </Breadcrumb>
-        <Row>
+        <Row class-name="tooling">
             <Col span="12"> <h1>Upstream List:</h1></Col>
             <Col span="12" style="text-align:right;position: absolute;top: 30%;right: 0px">
                 <Button type="primary" size="small" @click="addUpstream">Add Upstream</Button>
@@ -149,10 +149,6 @@
     }
 </script>
 
-<style scoped>
-    .page {
-        text-align: right;
-        margin-top: 10px;
-        font-size: 1rem;
-    }
+<style>
+
 </style>

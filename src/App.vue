@@ -12,4 +12,12 @@
   text-align: center;
   color: #2c3e50;
 }
+.tooling {
+  margin-bottom: 10px;
+}
+.page {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 1rem;
+}
 </style>
