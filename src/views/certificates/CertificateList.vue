@@ -4,7 +4,7 @@
             <BreadcrumbItem to="/">Home</BreadcrumbItem>
             <BreadcrumbItem to="/certificate">Certificate</BreadcrumbItem>
         </Breadcrumb>
-        <Row>
+        <Row class-name="tooling">
             <Col span="12"> <h1>{{$t('breadcrumb.certificate_list')}}:</h1></Col>
             <Col span="12" style="text-align:right;position: absolute;top: 30%;right: 0px">
                 <Button type="primary" size="small" @click="addCertificate">{{$t('breadcrumb.add_certificate')}}</Button>
@@ -134,10 +134,6 @@
     }
 </script>
 
-<style scoped>
-    .page {
-        text-align: right;
-        margin-top: 10px;
-        font-size: 1rem;
-    }
+<style>
+
 </style>

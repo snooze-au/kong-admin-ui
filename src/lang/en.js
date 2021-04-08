@@ -59,7 +59,7 @@ export default {
         serviceInfo:'Service Info',
         routeInfo:'Route Info',
         service_upstream:'Service\'s Upstream',
-        upstreamNotExisted:'Upstream `{host}` does not exist. If this is not an external host, You must add an Upstream named `{host}`',
+        upstreamNotExisted:'Upstream `{host}` does not exist. If this is not an external host, you must add an Upstream named `{host}`',
         fieldServiceName:'The Service name',
         fieldRetries:'The number of retries to execute upon failure to proxy.',
         fieldProtocol:'The protocol used to communicate with the upstream. It can be one of http or https.',

@@ -13,14 +13,14 @@
                     <Option v-for="item in enabledPlugins" :value="item" :key="item">{{ item }}</Option>
                 </Select>
                 <span class="field_desc"><a href="https://docs.konghq.com/hub/"
-                                            target="_blank">Plugin's document</a></span>
+                                            target="_blank">Plugin's documentation</a></span>
             </FormItem>
 
             <FormItem label="service:">
                 <Select v-model="serviceId" filterable class="text_input_multiple" ref="service" clearable>
                     <Option v-for="item in services" :value="item.id" :key="item.id">{{ item.id+' '+item.name}}</Option>
                 </Select>
-                <span class="field_desc">If this plugin no need assign to a service,leave it blank.</span>
+                <span class="field_desc">Leave blank to globally assign this plugin to all services.</span>
             </FormItem>
 
             <FormItem label="route:">
@@ -28,7 +28,7 @@
                     <Option v-for="item in routes" :value="item.id" :key="item.id">{{ item.id }}
                     </Option>
                 </Select>
-                <span class="field_desc">If this plugin no need assign to a route,leave it blank.</span>
+                <span class="field_desc">Leave blank to globally assign this plugin to all routes.</span>
             </FormItem>
 
 
@@ -38,7 +38,7 @@
                         {{ item.id+' '+item.username+' '+item.custom_id }}
                     </Option>
                 </Select>
-                <span class="field_desc">If this plugin no need assign to a consumer,leave it blank.</span>
+                <span class="field_desc">Leave blank to globally assign this plugin to all consumers.</span>
             </FormItem>
 
             <FormItem label="run_on:" v-if="!isKong2()">
@@ -47,7 +47,7 @@
                         {{ item }}
                     </Option>
                 </Select>
-                <span class="field_desc">Control on which Kong nodes this plugin will run, given a Service Mesh scenario. </span>
+                <span class="field_desc">Control on which Kong nodes this plugin will run, given a Service Mesh scenario.</span>
             </FormItem>
 
             <FormItem label="enable:">
@@ -55,12 +55,11 @@
                     <span slot="open">true</span>
                     <span slot="close">false</span>
                 </i-switch>
-                <span class="field_desc">Whether the plugin is applied.</span>
+                <span class="field_desc">Enable this plugin.</span>
             </FormItem>
 
 
-            <FormItem :label-width="300" v-for="field in flatFields" :label="field.fieldName+':'"
-                      :key="field.fieldName">
+            <FormItem :label-width="300" v-for="field in flatFields" :label="field.fieldName+':'" :key="field.fieldName">
 
                 <Input v-if="field.fieldType==='string'" :name="field.fieldName" class="text_input"
                        @input="valueChange($event,field)"
@@ -132,6 +131,7 @@
             },
             serviceId: {
                 get() {
+                    if(!this.formItem.service){ return null; }
                     return this.formItem.service.id;
                 },
                 set(newValue) {
@@ -163,7 +163,9 @@
             loadPlugin() {
                 this._get('/plugins/' + this.pluginId, response => {
                     this.formItem = response.data;
-                    this.serviceId = this.formItem.service.id;
+                    if (this.formItem.service) {
+                      this.serviceId = this.formItem.service.id;
+                    }
                     if (!this.formItem.consumer) {
                         this.formItem.consumer = {};
                     }

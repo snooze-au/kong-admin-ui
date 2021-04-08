@@ -4,7 +4,7 @@
             <BreadcrumbItem to="/">Home</BreadcrumbItem>
             <BreadcrumbItem to="/plugins">Plugin</BreadcrumbItem>
         </Breadcrumb>
-        <Row>
+        <Row class-name="tooling">
             <Col span="12"><h1>Plugin List:</h1></Col>
             <Col span="12" style="text-align:right;position: absolute;top: 30%;right: 0px">
                 <Button type="primary" size="small" @click="addPlugin">Add Plugin</Button>
@@ -102,6 +102,6 @@
     }
 </script>
 
-<style scoped>
+<style>
 
 </style>
