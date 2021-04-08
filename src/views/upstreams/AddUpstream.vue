@@ -40,7 +40,7 @@
                     <Radio label="header">header</Radio>
                     <Radio label="cookie">cookie</Radio>
                 </RadioGroup>
-                <span class="field_desc">What to use as hashing input if the primary hash_on does not return a hash (eg. header is missing, or no consumer identified). One of: none, consumer, ip, header, or cookie. Not available if hash_on is set to cookie. </span>
+                <span class="field_desc">What to use as a hashing input if the primary hash_on does not return a hash (eg. header is missing, or no consumer identified). One of: none, consumer, ip, header, or cookie. Not available if hash_on is set to cookie. </span>
             </FormItem>
 
 

@@ -10,11 +10,12 @@
                         <Menu></Menu>
                     </keep-alive>
                 </Sider>
-                <Content>
+                <Content class="layout-container">
                     <router-view class="router-content"></router-view>
+                    <Footer><FooterComponent></FooterComponent></Footer>
                 </Content>
+
             </Layout>
-            <Footer><FooterComponent></FooterComponent></Footer>
         </Layout>
     </div>
 </template>
@@ -38,6 +39,15 @@
     }
 </script>
 <style scoped>
+    .layout {
+      height: 100vh;
+    }
+    .layout .ivu-layout {
+      height: 100%;
+    }
+    .layout-container {
+      height: 100%;
+    }
     .router-content {
         margin: 20px;
         text-align: left;

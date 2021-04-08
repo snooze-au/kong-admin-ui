@@ -5,7 +5,7 @@
         </Col>
         <Col span="21" class="config">
             <div>
-                <p><router-link to="/config">{{address}}</router-link>&nbsp;&nbsp;&nbsp;&nbsp; <a @click="changeLanguage">{{language}}</a> </p>
+                <p><router-link to="/config">{{address}}</router-link></p>
             </div>
         </Col>
     </Row>
